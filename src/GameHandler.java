@@ -111,7 +111,7 @@ class GameHandler extends JFrame implements KeyListener {
 
         private void drawEnemy() {
                 for (int i = 0; i < enemyNum; i++) {
-                        drawToBuffer(enemyArray[i].enemyPosX, enemyArray[i].enemyPosY, enemyArray[i].getImage());
+                        drawToBuffer(enemyArray[i].posX, enemyArray[i].posY, enemyArray[i].getImage());
                 }
         }
 
@@ -122,7 +122,7 @@ class GameHandler extends JFrame implements KeyListener {
                                 bulletList.remove(i);
                         else {
                                 bullet.changePosY();
-                                drawToBuffer(bullet.getX(), bullet.bulletPosY, bullet.getImage());
+                                drawToBuffer(bullet.getX(), bullet.posY, bullet.getImage());
                         }
                 }
         }
